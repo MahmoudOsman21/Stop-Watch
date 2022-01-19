@@ -97,28 +97,28 @@ void main(void)
     {
         //Display all counts
         PORTA = (1<<5);
-		PORTC = second % 10;
-		_delay_ms(5);
+	PORTC = second % 10;
+	_delay_ms(5);
 
-		PORTA = (1<<4);
-		PORTC = second / 10;
-		_delay_ms(5);
+	PORTA = (1<<4);
+	PORTC = second / 10;
+	_delay_ms(5);
 
-		PORTA = (1<<3);
-		PORTC = minute % 10;
-		_delay_ms(5);
+	PORTA = (1<<3);
+	PORTC = minute % 10;
+	_delay_ms(5);
 
-		PORTA = (1<<2);
-		PORTC = minute / 10;
-		_delay_ms(5);
+	PORTA = (1<<2);
+	PORTC = minute / 10;
+	_delay_ms(5);
+	    
+	PORTA = (1<<1);
+	PORTC = hour % 10;
+	_delay_ms(5);
 
-		PORTA = (1<<1);
-		PORTC = hour % 10;
-		_delay_ms(5);
-
-		PORTA = (1<<0);
-		PORTC = hour / 10;
-		_delay_ms(5);
+	PORTA = (1<<0);
+	PORTC = hour / 10;
+	_delay_ms(5);
     }
 
 }
