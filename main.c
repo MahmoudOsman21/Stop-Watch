@@ -9,6 +9,11 @@
 #include <avr/interrupt.h>
 #include <util/delay.h>
 
+unsigned char second = 0;
+unsigned char minute = 0;
+unsigned char hour = 0;
+unsigned char temp=0;
+
 ISR(INT0_vect){
     /*Reset all values*/
     second = 0;
@@ -44,11 +49,6 @@ ISR(TIMER1_COMPA_vect){
 	}
 }
 
-
-unsigned char second = 0;
-unsigned char minute = 0;
-unsigned char hour = 0;
-unsigned char temp=0;
 
 void Timer1_CTC_Init(){
         TCCR1A=(1<<COM1A1)|(1<<FOC1A); /*Turn on compare mode for channel A*/
